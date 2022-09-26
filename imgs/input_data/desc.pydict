@@ -1,0 +1,61 @@
+{
+    # <file path>: (<description>, <objects, that should be recognized>, (<number of fitting objects>, <fitting objects>))
+    #
+    # objects are joined with space
+    # <objects, that should be recognized> are in the order of expected recognition: uppermost > lowermost; leftmost > rightmost; uppermost > leftmost
+    # <fitting objects> are in lexical order
+    #
+    "a/a0.jpg": ("Triangle with no objects", "", (0, "")),
+    "a/a1.jpg": ("Triangle with 1 object (clay), that fits", "clay", (1, "clay")),
+    "a/a2.jpg": ("Triangle with 1 object (cap), that fits", "cap", (1, "cap")),
+    "a/a3.jpg": ("Triangle with 1 object (button), that doesn't fit", "button", (0, "")),
+    "a/a4.jpg": ("Triangle with 1 object with hole (sim), that doesn't fit", "sim", (0, "")),
+    "a/a5.jpg": ("Triangle with 2 objects (clay, cap), each fits, but not both", "clay cap", (1, "cap")),
+    #
+    "b/b0.jpg": ("Poly (sim) with 1 object (wheel), that fits", "wheel", (1, "wheel")),
+    "b/b1.jpg": ("Poly (sim) with 1 object with hole (sim), that fits", "sim", (1, "sim")),
+    "b/b2.jpg": ("Poly (sim) with 1 object (button), that doesn't fit", "button", (0, "")),
+    "b/b3.jpg": ("Poly (sim) with 1 object (hexagon), that doesn't fit", "hexagon", (0, "")),
+    "b/b4.jpg": ("Poly (sim) with 2 objects (button, wheel), only one of them fits (wheel)", "button wheel", (1, "wheel")),
+    "b/b5.jpg": ("Poly (sim) with 2 objects (cap, sim), one with hole (sim), either and both fit", "cap sim", (2, "cap sim")),
+    "b/b6.jpg": ("Poly (sim) with 3 objects (clay, sim, cap), one with hole (sim), either pair fits", "clay sim cap", (2, "cap sim")), # sim is upper than cap
+    #
+    "c/c0.jpg": ("Poly (rubber_band) with 1 object (rubber_band), that fits", "rubber_band", (1, "rubber_band")),
+    "c/c1.jpg": ("Poly (rubber_band) with 1 object (flash_drive), that fits", "flash_drive", (1, "flash_drive")),
+    "c/c2.jpg": ("Poly (rubber_band) with 1 object (spatula), that doesn't fit", "spatula", (0, "")),
+    "c/c3.jpg": ("Poly (rubber_band) with 3 objects (rubber_band, sim, hexagon), 3 of them fit (placing inside rubber band)", "rubber_band sim hexagon", (3, "hexagon rubber_band sim")),
+    "c/c4.jpg": ("Poly (rubber_band) with 5 objects (rubber_band, sim, cap, clay, wheel), 5 of them fit (placing inside rubber band and sim)", "rubber_band sim cap clay wheel", (5, "cap clay rubber_band sim wheel")),
+    #
+    "d/d0.jpg": ("Poly (sponge) with 1 object (sponge), that fits", "sponge", (1, "sponge")),
+    "d/d1.jpg": ("Poly (sponge) with 4 objects (spatula, hexagon, button, flash_drive), 4 of them fit", "spatula hexagon button flash_drive", (4, "button flash_drive hexagon spatula")),
+    #
+    "e/e0.jpg": ("Poly (spatula) with 1 object (spatula), that fits", "spatula", (1, "spatula")),
+    "e/e1.jpg": ("Poly (spatula) with 1 object (rubber_band), that doesn't fit", "rubber_band", (0, "")),
+    "e/e2.jpg": ("Poly (spatula) with 2 objects (cap, spatula), with only one of them fitting (cap doesn't fit the spatula's hole)", "cap spatula", (1, "spatula")),
+    "e/e3.jpg": ("Poly (spatula) with 2 objects (clay, spatula), with only one of them fitting (clay doesn't fit the spatula's hole)", "clay spatula", (1, "spatula")),
+    "e/e4.jpg": ("Poly (spatula) with 6 objects (flash_drive, sim, hexagon, clay, cap, button), 6 of them fit (placing inside sim)", "flash_drive sim hexagon clay cap button", (6, "button cap clay flash_drive hexagon sim")),
+    #
+    "f/f0.jpg": ("Poly (hexagon) with 1 object (hexagon), that fits", "hexagon", (1, "hexagon")),
+    "f/f1.jpg": ("Poly (hexagon) with 1 object (button), that fits", "button", (1, "button")),
+    "f/f3.jpg": ("Poly (hexagon) with 1 object (flash_drive), that doesn't fit", "f/flash_drive", (0, "")),
+    "f/f3.jpg": ("Poly (hexagon) with 1 object (sponge), that doesn't fit", "sponge", (0, "")),
+    "f/f4.jpg": ("Poly (hexagon) with 2 objects (cap, clay), both of them fit", "cap clay", (2, "cap clay")),
+    #
+    "g/g0.jpg": ("Self-crossing poly (sponge) with 1 object (sponge), that doesn't fit", "sponge", (0, "")),
+    "g/g1.jpg": ("Self-crossing poly (sponge) with 1 object (spatula), that doesn't fit", "spatula", (0, "")),
+    "g/g2.jpg": ("Self-crossing poly (sponge) with 8 objects (sim, flash_drive, rubber_band, cap, button, wheel, clay, hexagon), 8 of them fitting", "sim flash_drive rubber_band cap button wheel clay hexagon", (8, "button cap clay flash_drive hexagon rubber_band sim wheel")),
+    #
+    "h/h0.jpg": ("Poly (sim+flash_drive) with 2 objects (flash_drive, sim), 2 of them fitting", "flash_drive sim", (2, "flash_drive, sim")),
+    "h/h1.jpg": ("Poly (sim+flash_drive) with 2 objects (flash_drive, hexagon), 2 of them fitting", "flash_drive hexagon", (2, "flash_drive hexagon")),
+    "h/h2.jpg": ("Poly (sim+flash_drive) with 2 objects (button, flash_drive), 2 of them fitting", "button flash_drive", (2, "button flash_drive")),
+    "h/h3.jpg": ("Poly (sim+flash_drive) with 2 objects (flash_drive, wheel), 2 of them fitting", "flash_drive wheel", (2, "flash_drive wheel")),
+    "h/h4.jpg": ("Poly (sim+flash_drive) with 4 objects (flash_drive, sim, cap, clay), 3 of them fitting", "flash_drive sim cap clay", (3, "clay flash_drive sim")),
+    #
+    "i/i0.jpg": ("Small triangle with 1 object (cap), that doesn't fit", "cap", (0, "")),
+    "i/i1.jpg": ("Small triangle with 1 object with hole (rubber_band), that doesn't fit (hole larger than poly)", "rubber_band", (0, "")),
+    #
+    "j/j0.jpg": ("Self-crossing poly (star) with 1 object (hexagon), that doesn't fit", "hexagon", (0, "")),
+    "j/j1.jpg": ("Self-crossing poly (star) with 1 object (sim), that doesn't fit", "sim", (0, "")),
+    "j/j2.jpg": ("Self-crossing poly (star) with 2 objects (wheel, button), each fits, not both", "wheel button", (1, "wheel")),
+    "j/j3.jpg": ("Self-crossing poly (star) with 3 objects (clay, wheel, cap), 3 of them fitting", "clay wheel cap", (3, "cap clay wheel")),
+}
