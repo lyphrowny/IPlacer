@@ -2,7 +2,7 @@ from functools import partial
 from pathlib import Path
 import argparse
 from itertools import chain
-from utils import iterdir
+from intelligent_placer_lib.utils import iterdir
 
 _IMG_PATH = "img_path"
 _RECURSIVE = "-r"
